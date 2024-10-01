@@ -1,0 +1,85 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  root {
+    /* Color variables... */
+    --black_0: #000000;
+    --black_1: #00000019;
+    --black_900: #010101;
+    --black_900_00: #00000000;
+    --black_900_99: #00000099;
+    --black_900_b2: #000000b2;
+    --blue_a400: #1877f2;
+    --blue_gray_100: #d9d9d9;
+    --blue_gray_400: #709690;
+    --blue_gray_800: #2b456f;
+    --blue_gray_900: #31353a;
+    --deep_orange_300: #e48f4c;
+    --deep_orange_800: #b65d28;
+    --gray_400_00: #bababa00;
+    --gray_400_66: #bababa66;
+    --gray_700_4c: #6464644c;
+    --gray_800: #3a3a3c;
+    --gray_900: #1clclb;
+    --gray_900_19: #26262619;
+    --gray_900_19_01: #2b292919;
+    --gray_900_33: #26262633;
+    --gray_900_4c: #2626264c;
+    --gray_900_99: #1e1d1d99;
+    --green_a700: #00e510;
+    --indigo_400: #5f85b1;
+    --lime_100_7f: #f3e3bf7f;
+    --white: #ffffff;
+    --white_10: #ffffff19;
+    --white_20_: #ffffff33;
+    --white_40: #ffffff66;
+    --white_60: #ffffff99;
+    --color_white_a700: #fdfdfd;
+    --color_white_a700_7f: #ffffff7f;
+    --color_white_a700_9b: #ffffff9b;
+    --color_white_a700_e5: #ffffffe5;
+
+    /* Shadow variables... */
+    --shadow-xs: 0 5px 30px rgba(0, 0, 0, 0.05);
+
+    /* Border radius variables... */
+    --radius-xs: 1px;
+    --radius-sm: 2px;
+    --radius-md: 3px;
+    --radius-lg: 14px;
+    --radius-xl: 20px;
+    --radius-2xl: 24px;
+    --radius-3xl: 26px;
+    --radius-4xl: 28px;
+    --radius-5xl: 32px;
+    --radius-6xl: 38px;
+    --radius-7xl: 40px;
+    --radius-8xl: 50px;
+    --radius-9xl: 54px;
+
+    /* Spacing variables... */
+    --space-xs: 4px;
+    --space-sm: 6px;
+    --space-md: 8px;
+    --space-lg: 10px;
+    --space-xl: 12px;
+    --space-2xl: 14px;
+    --space-3xl: 16px;
+    --space-4xl: 24px;
+    --space-5xl: 30px;
+    --space-6xl: 36px;
+    --space-7xl: 38px;
+    --space-8xl: 60px;
+    --space-9xl: 76px;
+    --space-10xl: 162px;
+    --space-11xl: 276px;
+    --space-12xl: 342px;
+  }
+}
+@layer components {
+  .container {
+    @apply w-full mx-auto max-w-[1360px];
+  }
+}
