@@ -19,6 +19,7 @@ const Heading = ({
   ...restProps
 }) => {
   const Component = as || "h6";
+
   return (
     <Component
       className={`text-white font-sfprodisplay ${className} ${sizes[size]}`}
@@ -28,4 +29,5 @@ const Heading = ({
     </Component>
   );
 };
+
 export { Heading };

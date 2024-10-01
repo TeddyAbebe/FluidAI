@@ -1,18 +1,81 @@
-/* eslint-disable react/prop-types */
+import React from "react";
+import PropTypes from "prop-types";
 
-const CloseSVG = ({ fillColor = "#000000", className = "", ...props }) => {
-  return (
-    <svg
-      fill={fillColor}
-      xmlns="http://www.w3.org/2000/svg"
-      className={className}
-      {...props}
-      height={props?.width || 20}
-      width={props?.height || 20}
-      viewBox={`0 0 ${props?.width || 20} ${props?.height || 20}`}
-    >
-      <path d="M 4.7070312 3.2929688 L 3.2929688 4.7070312 L 10.585938 12 L 3.2929688 19.292969 L 4.7070312 20.707031 L 12 13.414062 L 19.292969 20.707031 L 20.707031 19.292969 L 13.414062 12 L 20.707031 4.7070312 L 19.292969 3.2929688 L 12 10.585938 L 4.7070312 3.2929688 z" />
-    </svg>
-  );
+
+const shapes = {
+  square: "rounded-[0px]",
 };
-export { CloseSVG };
+
+
+const variants = {
+  underline: {
+    "white_40%": "text-white 40 border-b border-white 40 border-solid",
+  },
+};
+
+
+const sizes = {
+  xs: "h-[32px] px-3 text-[16px]",
+};
+
+
+const Input = React.forwardRef(
+  (
+    {
+      className = "",
+      name = "",
+      placeholder = "",
+      type = "text",
+      label = "",
+      prefix,
+      suffix,
+      onChange,
+      shape,
+      variant = "underline",
+      size = "xs",
+      color = "white 40%",
+      ...restProps
+    },
+    ref
+  ) => {
+    return (
+      <label
+        className={`${className} flex items-center justify-center cursor-text text-white_40_text-[16px] border-b border-white_40_border-solid ${
+          shape && shapes[shape]
+        } ${variant && (variants[variant]?.[color] || variants[variant])} ${
+          size && sizes[size]
+        }`}
+      >
+        {!!label && label}
+        {!!prefix && prefix}
+        <input
+          ref={ref}
+          type={type}
+          name={name}
+          placeholder={placeholder}
+          onChange={onChange}
+          {...restProps}
+        />
+        {!!suffix && suffix}
+      </label>
+    );
+  }
+);
+
+
+Input.propTypes = {
+  className: PropTypes.string,
+  name: PropTypes.string,
+  placeholder: PropTypes.string,
+  type: PropTypes.string,
+  label: PropTypes.string,
+  prefix: PropTypes.node,
+  suffix: PropTypes.node,
+  shape: PropTypes.oneOf(["square"]),
+  size: PropTypes.oneOf(["xs"]),
+  variant: PropTypes.oneOf(["underline"]),
+  color: PropTypes.oneOf(["white_40%"]),
+};
+
+
+export { Input };

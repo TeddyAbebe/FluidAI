@@ -1,15 +1,14 @@
-/* eslint-disable react/prop-types */
 import { Img, Heading } from "./..";
+import React from "react";
 
 export default function CuriosityWonderAweSection({
   headlineText = "What can curiosity, wonder, and awe do for you?",
-  className,
   ...props
 }) {
   return (
     <div
       {...props}
-      className={`${className} flex flex-col items-center gap-3 flex-1`}
+      className={`${props.className} flex flex-col items-center gap-3 flex-1`}
     >
       <div className="self-stretch">
         <div className="flex items-center justify-between gap-5">

@@ -1,8 +1,9 @@
 /* eslint-disable react/prop-types */
 const Img = ({
-  className,
+  className = "",
   src = "defaultNoData.png",
   alt = "testImg",
+  loading = "lazy",
   ...restProps
 }) => {
   return (
@@ -10,9 +11,10 @@ const Img = ({
       className={className}
       src={src}
       alt={alt}
+      loading={loading}
       {...restProps}
-      loading={"lazy"}
     />
   );
 };
+
 export { Img };

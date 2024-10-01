@@ -1,7 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 export default {
   content: [
-    "./src/**/*.{js,ts,jsx,tsx,html,mdx}", // Fixed curly braces for multiple extensions
+    "./src/**/*.{js,ts,jsx,tsx,html,mdx}", 
   ],
   darkMode: "class",
   theme: {
