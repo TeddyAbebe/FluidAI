@@ -3,10 +3,10 @@ import { Img, Button, SelectBox, Input, Text, Heading } from "../../components";
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
 import UserProfile from "../../components/UserProfile";
-import CuriosityAndAweSection from "./CuriosityAndAweSection";
 import HomeMainSection from "./HomeMainSection";
 import HomeSection from "./HomeSection";
 import HomeSection1 from "./HomeSection1";
+import CuriosityAndAweSection from "./CuriositySection";
 
 const dropDownOptions = [
   { label: "Option1", value: "option1" },
